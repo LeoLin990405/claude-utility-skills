@@ -1,71 +1,38 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Claude%20Code-Skill-blue?style=for-the-badge" alt="Claude Code Skill">
-  <img src="https://img.shields.io/badge/Skills-6-green?style=for-the-badge" alt="Skills">
-  <img src="https://img.shields.io/badge/Developer-Toolkit-607D8B?style=for-the-badge" alt="Developer Toolkit">
+  <img src="https://img.shields.io/github/license/LeoLin990405/claude-utility-skills?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/stars/LeoLin990405/claude-utility-skills?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/issues/LeoLin990405/claude-utility-skills?style=flat-square" alt="Issues">
+  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code Skill">
 </p>
 
-<h1 align="center">Developer Toolkit</h1>
+<h1 align="center">Claude Utility Skills</h1>
 
 <p align="center">
-  <strong>Complete Developer Toolkit for Claude Code</strong>
+  <strong>A curated collection of specialized skills for Claude Code</strong>
   <br>
-  <em>6 specialized skills, 3 templates — covering skill creation, MCP building, docs, testing, and more</em>
+  <em>Skill creation, MCP server building, documentation, testing, communications, and research</em>
 </p>
 
 <p align="center">
-  <a href="#skills">Skills</a> •
-  <a href="#templates">Templates</a> •
-  <a href="#quick-start">Quick Start</a>
+  <a href="#features">Features</a> &middot;
+  <a href="#quick-start">Quick Start</a> &middot;
+  <a href="#skills-overview">Skills</a> &middot;
+  <a href="#project-structure">Structure</a> &middot;
+  <a href="#contributing">Contributing</a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Claude%20Code-CLI-8A2BE2?logo=anthropic&logoColor=white" alt="Claude Code">
-  <img src="https://img.shields.io/badge/MCP-Protocol-00BCD4?logo=protocol&logoColor=white" alt="MCP">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white" alt="Playwright">
-  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
-</p>
-
-**English** | [中文](#中文)
-
 ---
 
-## Overview
+## Features
 
-**Developer Toolkit** is a complete developer toolkit organized by domain. It provides 6 specialized skills with actionable workflows, frameworks, and executable templates for common developer tasks.
-
-### What Changed (v2.0)
-
-| Before (v1) | After (v2) |
-|-------------|------------|
-| Flat skill list | **Grouped by domain** (Development Tools, Knowledge Base, Communications, Testing, Research) |
-| No routing | **Intent-based routing** to the right skill |
-| No templates | **3 executable templates** (MCP server spec, skill spec, test plan) |
-| Skills only | **Workflow layer** on top of existing skills |
-
----
-
-## Skills
-
-| # | Group | Skill | What It Covers |
-|---|-------|-------|---------------|
-| 1 | Development Tools | [skill-creator](skills/skill-creator/SKILL.md) | Skill creation guide, SKILL.md format, best practices |
-| 2 | Development Tools | [mcp-builder](skills/mcp-builder/SKILL.md) | MCP server creation, FastMCP/TypeScript SDK, tools, resources |
-| 3 | Knowledge Base | [anthropic-docs](skills/anthropic-docs/SKILL.md) | Anthropic documentation, Claude API, model selection, Claude Code |
-| 4 | Communications | [internal-comms](skills/internal-comms/SKILL.md) | Status reports, leadership updates, newsletters, incident reports |
-| 5 | Testing | [webapp-testing](skills/webapp-testing/SKILL.md) | Playwright web app testing, screenshots, browser logs, UI debugging |
-| 6 | Research | [history-note-processor](skills/history-note-processor/SKILL.md) | Four-step deep reading, YAML frontmatter, Mermaid diagrams |
-
----
-
-## Templates
-
-Ready-to-use templates for common developer tasks:
-
-| Template | Use Case |
-|----------|----------|
-| [mcp-server-spec](templates/mcp-server-spec.md) | Specify an MCP server: tools, resources, prompts, auth, deployment |
-| [skill-spec](templates/skill-spec.md) | Specify a new skill: name, triggers, workflow, resources, testing |
-| [test-plan](templates/test-plan.md) | Plan web app testing: scenarios, expected results, environment setup |
+| Feature | Skill | Description |
+|---------|-------|-------------|
+| Skill Creation | [skill-creator](skills/skill-creator/SKILL.md) | End-to-end guide for building Claude Code skills, including SKILL.md format, workflows, and best practices |
+| MCP Server Building | [mcp-builder](skills/mcp-builder/SKILL.md) | Build MCP servers with FastMCP (Python) or TypeScript SDK, with evaluation scripts and reference docs |
+| Anthropic Documentation | [anthropic-docs](skills/anthropic-docs/SKILL.md) | Comprehensive Anthropic knowledge base: API guide, models, Claude Code, research papers, safety policy |
+| Web App Testing | [webapp-testing](skills/webapp-testing/SKILL.md) | Playwright-based web app testing with screenshots, browser logs, and UI debugging workflows |
+| Internal Communications | [internal-comms](skills/internal-comms/SKILL.md) | Templates for status reports, leadership updates, newsletters, FAQ answers, and incident reports |
+| Research Notes | [history-note-processor](skills/history-note-processor/SKILL.md) | Four-step deep reading method with YAML frontmatter and Mermaid diagram generation |
 
 ---
 
@@ -80,63 +47,107 @@ git clone https://github.com/LeoLin990405/claude-utility-skills.git
 
 ### Usage
 
-```bash
-# The toolkit auto-routes based on your request:
-"Create a new skill"              -> skill-creator + skill-spec template
-"Build an MCP server"             -> mcp-builder + mcp-server-spec template
-"Test my web app"                 -> webapp-testing + test-plan template
+Skills are automatically available to Claude Code after installation. Use natural language to invoke them:
+
+```text
+"Create a new skill"              -> skill-creator
+"Build an MCP server"             -> mcp-builder
+"Test my web app"                 -> webapp-testing
 "Write a status report"           -> internal-comms
 "Look up Anthropic API docs"      -> anthropic-docs
+"Process these history notes"     -> history-note-processor
+```
 
-# Or access skills directly:
-"Use the mcp-builder skill"       -> mcp-builder
-"Show me the test plan template"  -> templates/test-plan
+Or reference a skill directly:
+
+```text
+"Use the mcp-builder skill to scaffold a Python MCP server"
 ```
 
 ---
 
-## 中文
+## Skills Overview
 
-### 概述
+### Development Tools
 
-**Developer Toolkit** 是一个完整的开发者工具集，按领域组织。提供 6 个专业技能和 3 个可执行模板，覆盖技能创建、MCP 服务器构建、文档查询、测试等常见开发任务。
+- **[skill-creator](skills/skill-creator/SKILL.md)** -- Complete guide to creating Claude Code skills. Includes `init_skill.py` for scaffolding, `package_skill.py` for packaging, and `quick_validate.py` for validation.
+- **[mcp-builder](skills/mcp-builder/SKILL.md)** -- Reference-driven MCP server creation. Ships with Python/Node.js server references, best practices guide, and an evaluation framework.
 
-### 技能
+### Knowledge Base
 
-| 分组 | 技能 | 覆盖范围 |
-|------|------|---------|
-| 开发工具 | skill-creator | 技能创建指南、SKILL.md 格式、最佳实践 |
-| 开发工具 | mcp-builder | MCP 服务器创建、FastMCP/TypeScript SDK |
-| 知识库 | anthropic-docs | Anthropic 文档、Claude API、模型选择 |
-| 通讯 | internal-comms | 状态报告、领导更新、通讯、事件报告 |
-| 测试 | webapp-testing | Playwright Web 应用测试、截图、浏览器日志 |
-| 研究 | history-note-processor | 四步深度阅读法、YAML、Mermaid 图表 |
+- **[anthropic-docs](skills/anthropic-docs/SKILL.md)** -- Curated Anthropic documentation covering the API, model selection, Claude Code features, engineering blog highlights, research papers, and safety policy.
 
-### 模板
+### Communications
 
-| 模板 | 用途 |
-|------|------|
-| mcp-server-spec | MCP 服务器规格：工具、资源、认证、部署 |
-| skill-spec | 技能规格：名称、触发器、工作流、测试 |
-| test-plan | 测试计划：场景、预期结果、环境配置 |
+- **[internal-comms](skills/internal-comms/SKILL.md)** -- Battle-tested templates for company newsletters, 3P updates, FAQ answers, and general communications.
 
-### 安装
+### Testing
 
-```bash
-cd ~/.claude/skills
-git clone https://github.com/LeoLin990405/claude-utility-skills.git
+- **[webapp-testing](skills/webapp-testing/SKILL.md)** -- Playwright-powered web app testing skill with example scripts for console logging, element discovery, and static HTML automation.
+
+### Research
+
+- **[history-note-processor](skills/history-note-processor/SKILL.md)** -- Deep reading and note-processing workflow with structured templates and API references.
+
+---
+
+## Project Structure
+
+```
+claude-utility-skills/
+├── LICENSE                          # MIT License
+├── README.md                        # This file
+├── SKILL.md                         # Root skill index
+├── CONTRIBUTING.md                  # Contribution guidelines
+├── CHANGELOG.md                     # Release history
+├── .github/
+│   ├── workflows/
+│   │   └── claude-review.yml        # Claude Code review action
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml           # Bug report template
+│   │   ├── feature_request.yml      # Feature request template
+│   │   └── config.yml               # Issue template config
+│   └── PULL_REQUEST_TEMPLATE.md     # PR template
+└── skills/
+    ├── skill-creator/               # Skill creation guide + scripts
+    │   ├── SKILL.md
+    │   ├── references/
+    │   └── scripts/
+    ├── mcp-builder/                 # MCP server building guide
+    │   ├── SKILL.md
+    │   ├── reference/
+    │   └── scripts/
+    ├── anthropic-docs/              # Anthropic documentation KB
+    │   ├── SKILL.md
+    │   ├── api-guide.md
+    │   ├── claude-code.md
+    │   ├── engineering-blog.md
+    │   ├── models.md
+    │   ├── research-papers.md
+    │   └── safety-policy.md
+    ├── internal-comms/              # Internal communications
+    │   ├── SKILL.md
+    │   └── examples/
+    ├── webapp-testing/              # Web app testing
+    │   ├── SKILL.md
+    │   ├── examples/
+    │   └── scripts/
+    └── history-note-processor/      # Research note processing
+        ├── SKILL.md
+        └── references/
 ```
 
 ---
 
-## Contributors
+## Contributing
 
-- **Leo** ([@LeoLin990405](https://github.com/LeoLin990405)) - Project Lead
-- **Claude** (Anthropic Claude) - Content Generation
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to submit skills, report bugs, and propose features.
+
+---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
