@@ -1,8 +1,8 @@
-# Archived: moved to claude-code-skills
+# Utility Skills
 
-This repository is no longer the canonical home for these utility and support skills.
+This repository is public and unarchived. It is kept as a maintenance mirror and migration reference for these utility and support skills.
 
-The active destination is:
+The active canonical destination is:
 - https://github.com/LeoLin990405/claude-code-skills
 
 The migrated skill packs live at:
@@ -16,6 +16,6 @@ The migrated skill packs live at:
 Note:
 - the only observed source-only delta was a tracked `__pycache__/` directory under `skills/skill-creator/scripts/`; the canonical script files themselves are already present in `claude-code-skills`.
 
-Use `claude-code-skills` for all future updates, fixes, and installation flows.
+## Maintenance
 
-This source repository is retained only as a historical pointer and is expected to remain archived.
+Use `claude-code-skills` for new features, utility workflow updates, and installation flow changes. This repository remains available for historical source context, issue triage, and small compatibility fixes when needed.
